@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniqueJS30</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <img src="./assets/images/logo.png" alt="logo" class="logo">
+    <h1 class="primary-title">UniqueJS30</h1>
+  </header>
+  <main>
+    <section class="introduction">
+      <div class="introduction__video-wrapper">
+        <video 
+        src="https://dms.licdn.com/playlist/C5605AQECpPcA0Qmksw/mp4-720p-30fp-crf28/0/1628676032255?e=1628802000&v=beta&t=F_HxE2S0BqZfsPHVu6orVG1jQ5WiaCOblfu7EJ1wPyk" 
+        class="introduction__video"></video>
+      </div>
+      <div class="introduction__overview">
+        <h2 class="introduction__title secondary-title">What is UniqueJS30?</h2>
+        <p class="introduction__msg">
+          Hey there everyone, my name is David Nugent. I'm a developer based out of BC, Canada. At 
+          the end of July 2021 I decided to take on a project to develop an app a day for 30 days.
+        </p>
+        <p class="introduction__msg">
+          This was in-part inspired by Wes Bos' JS30 free course - which I would highly recommend for any 
+          junior dev's, you can find it <a href="https://javascript30.com" class="emph-link">here</a>.
+          In this course, the idea is to learn by building and to only use vanillaJS with no packages or frameworks.
+          As an avid user of frameworks such as React I had some trepidation and looking at the course at a glance I
+          wasn't too sure I would actually learn any new skills, so I decided to take it one step further by building upon
+          the daily concepts and build something unique every day instead. Thus UniqueJS30 was born.
+        </p>
+        <p class="introduction__msg">
+          Below, as well as videos and descriptions, you can find live demos and source code. If you enjoy the concept
+          or any of the projects, feel free to connect with me directly <a href="mailto:info@davidnugent.me" class="emph-link">here</a>.
+        </p>
+      </div>
+    </section>
+    <section class="projects">
+      <h2 class="projects__title secondary-title">Projects</h2>
+      <div class="projects__container">
+        <article class="project">
+          <h4 class="project__no">01</h4>
+          <div class="project__preview">
+            <video 
+            src="https://dms.licdn.com/playlist/C4E05AQFNCqk3lJQxXg/mp4-720p-30fp-crf28/0/1627424327852?e=1628812800&v=beta&t=sFpQ-ic8zFHKxgckmDwnQ2NF3YVD-U0W8n1jdaeWlKM" 
+            class="project__demo-video" 
+            poster="./assets/images/previews/01-piano-emulator.png"
+            ></video>
+            <h3 class="project__title tertiary-title">
+              Piano Emulator
+              <span class="project__expand">⛛</span>
+            </h3>
+          </div>
+          <div class="project__more">
+            <p class="project__description">
+              For Day One, I created a piano emulator. The piano emulator uses keycode detection on
+              keyboard presses and maps these to specific audio elements which are subsequently played
+              allowing a user to emulate the experience of pressing a key on a piano. In addition I added
+              some dynamic transition effects to give the visual appearance of key presses.
+            </p>
+            <div class="project__links">
+              <a href="./pages/01-piano-emulator/index.html" class="project__link">
+                Live DEMO
+              </a>
+              <a href="https://github.com/D-Nugent/30-days-of-JS-projects--piano-emulator" class="project__link">
+                Github
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="./script.js"></script>
+</html>

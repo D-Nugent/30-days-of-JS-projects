@@ -1,0 +1,252 @@
+/* HTML Reset Starts */
+html {
+  box-sizing: border-box;
+  font-family:'Courier New', Courier, monospace;
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  /* background-image: url('./assets/images/fire.jpeg'); */
+  background-image: url('./assets/images/fire2.jpeg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+*,*::before,*:after{
+  box-sizing: inherit;
+}
+/* HTML Reset Ends */
+
+/* Top Level Styling Starts */
+.primary-title{
+  color: #ff5a09;
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: .6rem;
+  text-shadow: 2px 2px 2px black;
+}
+
+.secondary-title{
+  color: #ff5a09;
+  margin-bottom: 0;
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px black;
+}
+
+.tertiary-title{
+  color: #f5f5f5;
+  margin: 0;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 2px black;
+}
+
+.emph-link{
+  color: #ff5a09;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  padding: 5vw;
+}
+/* Top Level Styling Ends */
+
+/* Header Stying Starts */
+header{
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(63, 63, 63,.5);
+  /* background-color: #3f3f3f; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
+  position: relative;
+}
+
+.logo{
+  position: absolute;
+  top: 3vh;
+  left: 3vh;
+  height: 4vh;
+}
+/* Header Stying Ends */
+
+/* Intro Styling Starts */
+.introduction{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(63, 63, 63, .5);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.introduction__video-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(63, 63, 63, .25);
+}
+
+.introduction__video{
+  min-width: 288px;
+  width: 40%;
+  border-bottom: 2px solid #ff5a09;
+  /* border: 2px solid #ff5a09; */
+  /* box-shadow: 5vw 5vw 20vw 20vw rgba(0, 0, 0, .25),-5vw -5vw 20vw 20vw rgba(0, 0, 0, .25); */
+}
+
+.introduction__overview{
+  margin: 0 2vw 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.introduction__msg{
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px black;
+  user-select: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* Intro Styling Ends */
+
+/* Project Card Styling Starts */
+
+.projects{
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project{
+  background-color: rgba(63, 63, 63, .5);
+  border-radius: 16px;
+  margin: 16px;
+  overflow: hidden;
+  width: 30vw;
+  height: fit-content;
+  max-height: 28.3vh;
+  max-width: 320px;
+  position: relative;
+  transition: max-height .5s linear;
+}
+
+.project:hover{
+  cursor: pointer;
+}
+
+.project.--active{
+  height: fit-content;
+  max-height: 90vh;
+}
+
+.project.--active .project__more{
+  opacity: 1;
+}
+
+.project.--active .project__expand{
+  transform: rotateX(180deg);
+}
+
+.project__no{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ff5a09;
+  color: #f5f5f5;
+  margin: 0;
+  width: 2.5vw;
+  height: 2.5vw;
+  min-width: 8px;
+  min-height: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+}
+
+.project__preview{
+  flex: 1;
+  background-color: #ff5a09;
+}
+
+.project__demo-video{
+  width: 100%;
+}
+
+.project__title{
+  padding: 2% 4%;
+  position: relative;
+}
+
+.project__expand{
+  font-size: .8rem;
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  transition: transform .5s linear;
+}
+
+.project__more{
+  flex: 1;
+  padding: 2%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity .6s linear;
+}
+
+.project__description{
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.project__links{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.project__link{
+  text-decoration: none;
+  border: 2px solid #ff5a09;
+  padding: 1% 2%;
+  color: #f5f5f5;
+  box-shadow: 2px 2px 0 #f5f5f5;
+  transform: translate(-2px,-2px);
+  transition: transform .3s ease-in;
+  width: 40%;
+  max-width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project__link:hover{
+  color: #ff5a09;
+  box-shadow: none;
+  transform: translate(0,0);
+}
+
+/* Project Card Styling Ends */
