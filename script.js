@@ -15,7 +15,6 @@ function toggleVideoControls(){
   this.hasAttribute('controls')?this.removeAttribute('controls'):this.setAttribute('controls','')
 }
 function toggleExpand(){
-  console.log('expand ran');
   this.classList.toggle('--active');
   let modalVid = this.querySelector('video');
   modalVid.hasAttribute('controls')?modalVid.removeAttribute('controls'):modalVid.setAttribute('controls','')

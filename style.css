@@ -3,6 +3,13 @@ html {
   box-sizing: border-box;
   font-family:'Courier New', Courier, monospace;
   height: 100vh;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 769px) {
+ html {
+   font-size: 16px;
+ }
 }
 
 body {
@@ -26,10 +33,17 @@ body {
 .primary-title{
   color: #ff5a09;
   margin: 0;
-  font-size: 2.5rem;
-  letter-spacing: .6rem;
+  font-size: 2rem;
+  letter-spacing: .2rem;
   text-shadow: 2px 2px 2px black;
 }
+
+@media screen and (min-width: 768px) {
+  .primary-title{
+    font-size: 2.5rem;
+    letter-spacing: .6rem;
+  }
+ }
 
 .secondary-title{
   color: #ff5a09;
@@ -41,7 +55,7 @@ body {
 .tertiary-title{
   color: #f5f5f5;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-shadow: 2px 2px 2px black;
 }
 
@@ -54,6 +68,7 @@ body {
 main{
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 5vw;
 }
 /* Top Level Styling Ends */
@@ -63,7 +78,6 @@ header{
   width: 100%;
   height: 10vh;
   background-color: rgba(63, 63, 63,.5);
-  /* background-color: #3f3f3f; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,6 +102,7 @@ header{
   background-color: rgba(63, 63, 63, .5);
   border-radius: 16px;
   overflow: hidden;
+  max-width: 1120px;
 }
 
 .introduction__video-wrapper{
@@ -128,11 +143,16 @@ header{
 .projects{
   display: flex;
   flex-direction: column;
+  background-color: rgba(63, 63, 63, .5);
+  border-radius: 16px;
+  margin-top: 5vh;
+  padding: 0 2vw 2vw;
+  max-width: 1120px;
 }
 
 .projects__container{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -141,9 +161,9 @@ header{
   border-radius: 16px;
   margin: 16px;
   overflow: hidden;
-  width: 30vw;
+  width: 100%;
   height: fit-content;
-  max-height: 28.3vh;
+  max-height: 28vh;
   max-width: 320px;
   position: relative;
   transition: max-height .5s linear;
@@ -155,7 +175,7 @@ header{
 
 .project.--active{
   height: fit-content;
-  max-height: 90vh;
+  max-height: 120vh;
 }
 
 .project.--active .project__more{
@@ -164,6 +184,22 @@ header{
 
 .project.--active .project__expand{
   transform: rotateX(180deg);
+}
+
+@media screen and (min-width: 768px) {
+  .project{
+    max-width: 295px;
+    max-height: 25.7vh;
+  }
+  .project.--active{
+    max-height: 90vh;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .project{
+    max-height: 26.7vh;
+  }
 }
 
 .project__no{
@@ -175,8 +211,8 @@ header{
   margin: 0;
   width: 2.5vw;
   height: 2.5vw;
-  min-width: 8px;
-  min-height: 8px;
+  min-width: 24px;
+  min-height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,6 +226,9 @@ header{
 
 .project__demo-video{
   width: 100%;
+  height: 22.6vh;
+  object-fit: cover;
+  object-position: top;
 }
 
 .project__title{
