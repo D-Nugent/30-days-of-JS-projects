@@ -16,7 +16,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background-color: black;
+  background-color: #090909;
   /* background-image: url('./assets/images/fire.jpeg'); */
   background-image: url('./assets/images/fire2.jpeg');
   background-position: top;
@@ -192,7 +192,7 @@ header{
     max-height: 25.7vh;
   }
   .project.--active{
-    max-height: 90vh;
+    max-height: 112vh;
   }
 }
 
