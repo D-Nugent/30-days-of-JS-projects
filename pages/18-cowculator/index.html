@@ -1,0 +1,153 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cowculator 🐄</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1 class="primary-header">
+      🐄culator
+    </h1>
+  </header>
+  <main>
+    <section class="calc-in-cows">
+      <h2 class="calc-in-cows__title">Your 🐄culation is... <p class="calc-in-cows__result"></p></h2>
+      <p class="calc-in-cows__cows"></p>
+      <button class="calc-in-cows__close">Close</button>
+    </section>
+    <button class="btn-show-me-cows">Show me cows!</button>
+    <section class="calculator">
+      <article class="calculator__screen">
+        <p class="calculator__calculation"></p>
+        <p class="calculator__solution"></p>
+      </article>
+      <div class="calculator__methods">
+        <div class="calculator__functions">
+          <div class="calculator__toggle">
+            <input 
+              type="radio" 
+              name="radordeg" 
+              id="radians" 
+              value="radians" 
+              class="calculator__func calculator__toggle-input" 
+              checked
+            >
+            <label for="radians" class="calculator__func calculator__toggle-label">Rad</label>
+            <input 
+              type="radio" 
+              name="radordeg" 
+              id="degrees" 
+              value="degrees" 
+              class="calculator__func calculator__toggle-input"
+            >
+            <label for="degrees" class="calculator__func calculator__toggle-label">Deg</label>
+          </div>
+          <button data-type="sin(" class="calculator__func primary-btn">
+            sin
+          </button>
+          <button data-type="cos(" class="calculator__func primary-btn">
+            cos
+          </button>
+          <button data-type="tan(" class="calculator__func primary-btn">
+            tan
+          </button>
+          <button data-type="pi" class="calculator__func primary-btn">
+            🥧(π)
+          </button>
+          <button data-type="squareRoot" class="calculator__func primary-btn">
+            √
+          </button>
+          <button data-type="powerOf" class="calculator__func primary-btn">
+            <var>
+              x<sup>y</sup>
+            </var>
+          </button>
+          <button data-type="log(" class="calculator__func primary-btn">
+            ln
+          </button>
+          <button data-type="log10(" class="calculator__func primary-btn">
+            log
+          </button>
+        </div>
+        <div class="calculator__number-pad">
+          <button data-type="7" class="calculator__number">
+            7
+          </button>
+          <button data-type="8" class="calculator__number">
+            8
+          </button>
+          <button data-type="9" class="calculator__number">
+            9
+          </button>
+          <button data-type="4" class="calculator__number">
+            4
+          </button>
+          <button data-type="5" class="calculator__number">
+            5
+          </button>
+          <button data-type="6" class="calculator__number">
+            6
+          </button>
+          <button data-type="1" class="calculator__number">
+            1
+          </button>
+          <button data-type="2" class="calculator__number">
+            2
+          </button>
+          <button data-type="3" class="calculator__number">
+            3
+          </button>
+          <button data-type="0" class="calculator__number">
+            0
+          </button>
+          <button data-type="." class="calculator__number">
+            .
+          </button>
+          <button data-type="=" class="calculator__number">
+            =
+          </button>
+      </div>
+      <div class="calculator__method-wrapper">
+        <div class="calculator__arithmetic">
+          <button data-type="/" class="calculator__symbol  primary-btn">
+            ÷
+        </button>
+        <button data-type="*" class="calculator__symbol  primary-btn">
+          ×
+        </button>
+        <button data-type="-" class="calculator__symbol  primary-btn">
+          −
+        </button>
+        <button data-type="+" class="calculator__symbol  primary-btn">
+          +
+        </button>
+      </div>
+      <div class="calculator__adjusters">
+        <button data-type="ac" class="calculator__adj  primary-btn">
+          AC
+        </button>
+        <button data-type="back" class="calculator__adj  primary-btn">
+          BACK
+        </button>
+        <button data-type="(" class="calculator__adj  primary-btn">
+          (
+          </button>
+          <button data-type=")" class="calculator__adj  primary-btn">
+            )
+          </button>
+        </div>
+      </div>
+      </div>
+    </section>
+    <div class="calc-history">
+      <h2 class="calc-history__title">🐄culation History</h2>
+      <div class="calc-history__list"></div>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>

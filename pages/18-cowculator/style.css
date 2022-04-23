@@ -1,0 +1,449 @@
+/* HTML Reset */
+
+html {
+  font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1566040924976-f837330d1a5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1567&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+*,*::before,*::after {
+  box-sizing: inherit;
+}
+
+.primary-header {
+  margin: 0;
+}
+
+/* Top-level Styling */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+}
+
+main {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Calc History Styling */
+
+.calc-in-cows {
+  background-color: whitesmoke;
+  width: 75%;
+  height: 80%;
+  min-width: 288px;
+  margin: 2.5%;
+  padding: 0 2.5%;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 2;
+  transform: scaleY(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: top;
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-in-cows.--active {
+  transform: scaleY(1);
+}
+
+.calc-in-cows__title {
+  display: flex;
+}
+
+.calc-in-cows__result {
+  margin: 2px 0 0 2px;
+  text-decoration:dashed underline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc-in-cows__cows {
+  height: 75%;
+  width: 100%;
+  position: relative;
+  opacity: 1;
+  font-size: 1.5em;
+  overflow: auto;
+  background-image: url(https://images.unsplash.com/photo-1606749482582-8c73563adc2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-top: 0;
+}
+
+@keyframes cowjump0 {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0)  rotateY(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotateY(30deg);
+  }
+  100% {
+    transform: translateY(0)  rotateY(0deg);
+  }
+}
+@keyframes cowjump1 {
+  0% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotateY(-20deg);
+  }
+  50% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes cowjump2 {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  85% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes cowjump3 {
+  10% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-10px);
+  }
+  55% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.calc-in-cows__lil-cow {
+  margin: .25%;
+  height: fit-content;
+  font-size: 2.75rem;
+}
+
+.calc-in-cows__lil-cow.--jumping {
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+  animation-delay: 4s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.calc-in-cows__partial-cow {
+  margin: .25%;
+  height: fit-content;
+  overflow: hidden;
+  font-size: 2.75rem;
+}
+
+.calc-in-cows__close {
+  background-color: #dadce0;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  padding: .25rem 0.5rem;
+  align-self: flex-end;
+}
+
+.calc-in-cows__close:hover {
+  background-color: lightblue;
+}
+
+.btn-show-me-cows {
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 8px;
+  padding: 1.5%;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 2.5%;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.btn-show-me-cows.--visible {
+  opacity: 1;
+}
+
+.calc-history {
+  background-color: whitesmoke;
+  width: 70%;
+  min-width: 288px;
+  max-width: 512px;
+  margin: 5%;
+  border-radius: 8px;
+  opacity: 0;
+}
+
+.calc-history.--active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.calc-history__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0 1rem;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 8px;
+}
+
+.calc-history__list {
+  overflow: auto;
+  max-height: 105px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.calc-history__entry {
+  text-align: right;
+  width: 90%;
+  border-radius: 8px;
+  background-color: #dadce0;
+  border: 0;
+  margin: 0 8px 2px;
+}
+
+.calc-history__entry:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+/* Calc Styling */
+
+.calculator{
+  width: 100%;
+  min-width: 288px;
+  max-width: 512px;
+  height: fit-content;
+  background-color: whitesmoke;
+  padding: 1%;
+  border-radius: 8px;
+}
+
+.primary-btn {
+  background-color: #dadce0;
+  border: 0;
+}
+
+.primary-btn:hover {
+  background-color: lightsteelblue;
+}
+
+.calculator button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 62px;
+  border-radius: 6px;
+  margin: 1px;
+  font-family: 'Courier New', Courier, monospace;
+  transition: transform .2s ease-in-out;
+}
+
+.calculator button:hover {
+  cursor: pointer;
+}
+
+.calculator button.--active {
+  transform: scale(.9);
+}
+
+.calculator__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(218, 220, 224);
+  border-radius: 6px;
+  margin: 1px;
+}
+
+.calculator__toggle-input {
+  display: none;
+}
+
+.calculator__toggle-input:checked + label{
+  color: #000;
+}
+
+.calculator__toggle-label {
+  background-color: #f1f3f4;
+  border-color: #dadce0;
+  height: 32px;
+  width: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .825rem;
+  color: lightgray;
+}
+
+.calculator__toggle-label:first-of-type{
+  border-right: 2px solid rgb(218, 220, 224);
+}
+
+.calculator__toggle-label:hover {
+  cursor: pointer;
+}
+
+.calculator__functions{
+  display: flex;
+  flex-wrap: wrap;
+  /* max-width: 128px; */
+  width: 100%;
+  justify-content: center;
+}
+@media screen and (min-width: 720px) {
+  .calculator__functions{
+    max-width: 128px;
+  }
+}
+
+.calculator__screen{
+  width: 100%;
+  height: 40px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 2px solid #dadce0;
+  border-style: inset;
+  margin-bottom: 6px;
+  padding: 1% 2%;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calculator__calculation {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.calculator__calculation.--error {
+  color: gray;
+  font-size: .825rem;
+}
+
+.calculator__solution {
+  margin: 0 0 0 8px;
+  font-weight: 800;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.calculator__methods{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+@media screen and (min-width: 720px) {
+  .calculator__methods{
+    justify-content: space-between;
+  }
+}
+
+.calculator__number-pad{
+  display: flex;
+  flex-wrap: wrap;
+  width: 192px;
+  align-content: flex-start;
+}
+
+.calculator__number{
+  background-color: #f1f3f4;
+  border-color: #dadce0;
+}
+
+.calculator__number:hover{
+  background-color: lightblue;
+}
+
+.calculator__method-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.calculator__arithmetic{
+  display: flex;
+}
+
+.calculator__symbol {
+  font-size: 1.5rem;
+}
+
+.calculator__adjusters{
+  display: flex;
+}
+
+@media screen and (min-width: 720px) {
+  .calculator__adjusters{
+    flex-direction: column;
+  }
+  .calculator__arithmetic{
+    flex-direction: column;
+  }
+}
